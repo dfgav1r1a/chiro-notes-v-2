@@ -1,3 +1,20 @@
+/*Global element rules*/
 * {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
     box-sizing: border-box;
-}
+  }
+
+  .global-container {
+    
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+    height: 50px;
+    font-size: 18px;
+  }
