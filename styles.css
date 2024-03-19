@@ -60,4 +60,61 @@
     grid-column: 1 / 3;
   }
 
+/* sizing the canvas element */
+.canvas-container {
+  position: relative;
+  width: auto;
+  height: auto
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border: 1px solid #b6b6d5;
+  border-radius: 5px;
+}
+
+#draw,
+#undo,
+#dot {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 2.5em;
+  height: 2em;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+#draw img,
+#undo img,
+#dot img {
+  margin: auto;
+  width: 60%;
+  vertical-align: middle;
+}
+
+#dot {
+  top: 30px;
+}
+
+#undo {
+  top: 58px;
+}
+
+/* sizing image*/
+#pain-chart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  z-index: 0;
+}
+
   
