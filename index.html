@@ -4,43 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="chiropractic,medical notes" />
+  <meta name="keywords" content="chiropractic, daily, exam, notes" />
   <title>Chiropractic Medical Notes</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class='global-container'>
-    <div class='header'>
-      <div id='today-date'>
-        <label for='date'>Date:</label>
-        <input type="date" id='date' name='date'>
+    <form id='daily-exam'>
+      <div class='header'>
+        <div id='today-date'>
+          <label for='date'>Date:</label>
+          <input type="date" id='date' name='date'>
+        </div>
+        <div id='ptname'>
+          <label for='ptname'>Patient Name:</label>
+          <input type="text" id='ptname' name='ptname' spellcheck="true">
+        </div>
+        <div id='dob'>
+          <label for='dob'>DOB:</label>
+          <input type="date" id='dob' name='dob'>
+        </div>
       </div>
-      <div id='ptname'>
-        <label for='ptname'>Patient Name:</label>
-        <input type="text" id='ptname' name='ptname' spellcheck="true">
+      <div class="response-constainer">1 </div>
+      <div class="div2">
+        <label for='subjective'>Subjective:</label>
+        <textarea id='subjective' name='subjective' spellcheck="true" placeholder="Enter text here"></textarea>
       </div>
-      <div id='dob'>
-        <label for='dob'>DOB:</label>
-        <input type="date" id='dob' name='dob'>
+      <div class="div3">
+        <div class="objective-container">
+          <label for='objective'>Objective:</label>
+          <textarea id='objective' name='objective' spellcheck="true" placeholder="Enter text here"></textarea>
+        </div>
+        <div class="isd-container">
+          <label>ISD:</label>
+          <input type="checkbox" name="cs">
+          <input type="checkbox" name="ts">
+          <input type="checkbox" name="ls">
+          <input type="checkbox" name="ue">
+          <input type="checkbox" name="le">
+          <label>Short:</label>
+          <input type="checkbox" name="r">
+          <input type="checkbox" name="l">
+        </div>
+        <div class="myospasm-container"">
+        <label for=" myospasm">Myospasm:</label>
+          <input type="text" id="myospasm" name="myospasm" placeholder="Enter text here">
+        </div>
       </div>
-    </div>
-    <div class="div1">1</div>
-    <div class="div2">2</div>
-    <div class="div3">3</div>
-    <div class="body-chart">
-      <div class="canvas-container">
-        <img src="./images/pain-chart.png" id='pain-chart'>
-        <button id='draw'><img src='./images/draw.png'></button>
-        <button id='dot'><img src='./images/dot.png'></button>
-        <button id='undo'><img src='./images/undo.png'></button>
-        <canvas id="canvas"></canvas>
+      <div class="body-chart">
+        <div class="canvas-container">
+          <img src="./images/pain-chart.png" id='pain-chart'>
+          <button id='draw'><img src='./images/draw.png'></button>
+          <button id='dot'><img src='./images/dot.png'></button>
+          <button id='undo'><img src='./images/undo.png'></button>
+          <canvas id="canvas"></canvas>
+        </div>
       </div>
-    </div>
-    <div class="div5">5</div>
-    <div class="div6">6</div>
-    <div class="div7">7</div>
+      <div class="assessment">
+        <label for='assessment'>Assessment:</label>
+        <textarea id='assessment' name='assessment' spellcheck="true">Enter text here</textarea>
+      </div>
+      <div class="div6">6</div>
+      <div class="discussion-container">
+        <label for='discussion'>Discussion:</label>
+        <textarea id='discussion' name='discussion' spellcheck="true" placeholder="Enter text here"></textarea>
+        <div>
+        <input type="checkbox" name="discussion-check" id="discuss-check">
+          <label for='discussion-check'>Discussed MRI, injection therapy algorithm</label>
+        </div>
+      </div>
+    </form>
   </div>
+
   <script src="./scripts/canvas.js"></script>
 </body>
 
